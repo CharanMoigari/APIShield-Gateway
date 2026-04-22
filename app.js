@@ -34,3 +34,9 @@ mongoose.connect(process.env.MONGO_URI)
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server running on port 5000");
 });
+app.get("/", (req, res) => {
+  res.json({
+    message: "API Shield Gateway is running 🚀",
+    status: "OK"
+  });
+});
